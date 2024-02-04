@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>JS Project</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-lg-5 ms-2 fs-2 fw-bold" href="index.html"
+            >Electronic Store</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="ms-auto w-50">
+              <input
+                class="form-control search"
+                type="search"
+                id="search"
+                placeholder="Search"
+              />
+            </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExample"
+                  role="button"
+                  aria-controls="offcanvasExample"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </li>
+
+              <li class="nav-item mx-3 nouser">
+                <a class="nav-link" href="login.html">Sign In</a>
+              </li>
+              <li class="nav-item mx-3 me-5 nouser">
+                <a class="nav-link" href="register.html">Sign Up</a>
+              </li>
+
+              <li class="nav-item mx-3 userinfo">
+                <a
+                  class="nav-link"
+                  id="usertitle"
+                  aria-current="page"
+                  href="#"
+                ></a>
+              </li>
+              <li class="nav-item mx-3 me-5 userinfo">
+                <a
+                  onclick="logout()"
+                  id="logoutBtn"
+                  class="nav-link"
+                  href="index.html"
+                  >Log Out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="products mt-4">
+          <div
+            id="productContainer"
+            class="row row-cols-1 row-cols-md-3 g-4"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cart">
+      <div class="container">
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fs-3" id="offcanvasExampleLabel">
+              Shopping Cart
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <div id="productsAddedToCart"></div>
+
+            <div
+              class="offcanvas-header"
+              style="
+                position: fixed;
+                margin: auto;
+                z-index: 20;
+                background-color: white;
+                bottom: 0;
+                width: 365px;
+              "
+            >
+              <h5
+                class="offcanvas-title fs-3"
+                id="offcanvasExampleLabel2"
+                style="margin: auto"
+              >
+                Total Price
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/productsData.js"></script>
+  </body>
+</html>
