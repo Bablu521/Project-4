@@ -7,7 +7,7 @@
     width: 90%;
   }
   .search {
-    margin-left: -220px;
+    display: none;
   }
 }
 
